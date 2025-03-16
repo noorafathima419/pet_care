@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AdminNotification extends StatefulWidget {
@@ -12,29 +13,23 @@ class AdminNotification extends StatefulWidget {
 class _AdminNotificationState extends State<AdminNotification> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(appBar: AppBar(
+      backgroundColor: Colors.green,
+      leading: IconButton(
+        icon: Icon(Icons.arrow_back, color: Colors.black),
+        onPressed: () {},
+      ),
+      title: Padding(
+        padding: EdgeInsets.only(left: 80.w),
+        child: Text("Notification", style: TextStyle(color: Colors.black)),
+      ),
+    ),
       body: Column(
         children: [
           Row(
             children: [
-              Container(
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 160, top: 30),
-                  child: Text(
-                    "Notification",
-                    style: GoogleFonts.poppins(
-                        fontSize: 25, fontWeight: FontWeight.w400),
-                  ),
-                ),
-                width: 411,
-                height: 70,
-                color: Colors.lightGreen,
-              )
-            ],
-          ), Row(
-            children: [
               Padding(
-                padding: const EdgeInsets.only(top: 30, left: 60),
+                padding:  EdgeInsets.only(top: 30.h, left: 35.w),
                 child: Card(
                   child: Container(
                     child: Column(
@@ -42,11 +37,11 @@ class _AdminNotificationState extends State<AdminNotification> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 10),
+                              padding:  EdgeInsets.only(left: 10.w),
                               child: Text(
                                 "Matter",
                                 style: GoogleFonts.poppins(
-                                    fontWeight: FontWeight.w400, fontSize: 20),
+                                    fontWeight: FontWeight.w400, fontSize: 20.sp),
                               ),
                             )
                           ],
@@ -54,13 +49,13 @@ class _AdminNotificationState extends State<AdminNotification> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 30, top: 20),
+                              padding:  EdgeInsets.only(left: 40.w, top: 20.h),
                               child: Container(
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
+                                    borderRadius: BorderRadius.circular(5.r),
                                     color: Colors.white),
-                                height: 350,
-                                width: 230,
+                                height: 350.h,
+                                width: 250.w,
                               ),
                             )
                           ],
@@ -68,42 +63,42 @@ class _AdminNotificationState extends State<AdminNotification> {
                         Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 30, top: 10),
+                              padding:  EdgeInsets.only(left: 40.w, top: 10.h),
                               child: Container(
                                 child: Padding(
                                   padding:
-                                  const EdgeInsets.only(top: 10, left: 20),
+                                   EdgeInsets.only(top: 10.h, left: 20.w),
                                   child: Text(
                                     "Time",
-                                    style: GoogleFonts.poppins(fontSize: 15),
+                                    style: GoogleFonts.poppins(fontSize: 15.sp),
                                   ),
                                 ),
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
+                                    borderRadius: BorderRadius.circular(15.r),
                                     color: Colors.white),
-                                height: 50,
-                                width: 230,
+                                height: 50.h,
+                                width: 250.w,
                               ),
                             )
                           ],
                         ),Row(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 30, top: 10),
+                              padding:  EdgeInsets.only(left: 40.w, top: 10.h),
                               child: Container(
                                 child: Padding(
                                   padding:
-                                  const EdgeInsets.only(top: 10, left: 20),
+                                   EdgeInsets.only(top: 10.h, left: 20.w),
                                   child: Text(
                                     "Date",
-                                    style: GoogleFonts.poppins(fontSize: 15),
+                                    style: GoogleFonts.poppins(fontSize: 15.sp),
                                   ),
                                 ),
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
+                                    borderRadius: BorderRadius.circular(15.r),
                                     color: Colors.white),
-                                height: 50,
-                                width: 230,
+                                height: 50.h,
+                                width: 250.w,
                               ),
                             )
                           ],
@@ -112,31 +107,31 @@ class _AdminNotificationState extends State<AdminNotification> {
                           children: [
                             Padding(
                               padding:
-                              const EdgeInsets.only(left: 30, top: 100),
+                               EdgeInsets.only(left: 60.w, top: 100.h),
                               child: Container(
                                 child: Padding(
                                   padding:
-                                  const EdgeInsets.only(top: 15, left: 100),
+                                   EdgeInsets.only(top: 10.h, left: 70.w),
                                   child: Text(
                                     "ADD",
                                     style: GoogleFonts.poppins(
-                                        fontSize: 15,
+                                        fontSize: 20.sp,
                                         fontWeight: FontWeight.w600),
                                   ),
                                 ),
                                 decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(15),
+                                    borderRadius: BorderRadius.circular(15.r),
                                     color: Colors.lightGreen),
-                                height: 50,
-                                width: 250,
+                                height: 50.h,
+                                width: 200.w,
                               ),
                             )
                           ],
                         )
                       ],
                     ),
-                    height: 700,
-                    width: 300,
+                    height: 700.h,
+                    width: 330.w,
                   ),
                 ),
               )

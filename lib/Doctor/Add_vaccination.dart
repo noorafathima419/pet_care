@@ -3,77 +3,75 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class AdminDoctor extends StatefulWidget {
-  const AdminDoctor({super.key});
+class AddVaccination extends StatefulWidget {
+  const AddVaccination({super.key});
 
   @override
-  State<AdminDoctor> createState() => _AdminDoctorState();
+  State<AddVaccination> createState() => _AddVaccinationState();
 }
 
-class _AdminDoctorState extends State<AdminDoctor> {
+class _AddVaccinationState extends State<AddVaccination> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(
-      backgroundColor: Colors.green,
-      leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.black),
-        onPressed: () {},
-      ),
-      title: Padding(
-        padding: EdgeInsets.only(left: 80.w),
-        child: Text("DOCTOR", style: TextStyle(color: Colors.black)),
-      ),
-    ),
+    return  Scaffold(
       body: Column(
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: 7,
+              itemCount: 4,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding:  EdgeInsets.only(left: 30.w,right:30.w),
+                  padding: EdgeInsets.only(left: 30.w, right: 30.w),
                   child: Card(
                     elevation: 3,
-                    margin:  EdgeInsets.symmetric(vertical: 10),
+                    margin: EdgeInsets.symmetric(vertical: 10),
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.r)),
+                        borderRadius: BorderRadius.circular(20)),
                     child: Container(
-                      padding:  EdgeInsets.all(16),
+                      padding: EdgeInsets.all(16),
                       decoration: BoxDecoration(
                         color: Color(0xffCF6A6AF0E4E4),
-                        borderRadius: BorderRadius.circular(20.r),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: Row(
                         children: [
                           Container(
-                            height: 50.h,
+                            height: 50.w,
                             width: 50.w,
                             decoration: BoxDecoration(
                               shape: BoxShape.rectangle,
                               color: Colors.grey[400],
                             ),
-                            child:  Icon(Icons.person,
-                                size: 30.sp, color: Colors.white),
+                            child: Icon(Icons.person,
+                                size: 40.sp, color: Colors.white),
                           ),
-                           SizedBox(width: 16.w),
+                          SizedBox(width: 16.w),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("Name",
+                                Text("User name",
                                     style: GoogleFonts.inter(
                                         fontSize: 16.sp,
                                         fontWeight: FontWeight.w600)),
-                                Text("Experience",
+                                Text("pet name",
                                     style: GoogleFonts.inter(
-                                        fontSize: 14.sp, color: Colors.black,fontWeight: FontWeight.w600)),
-                                Text("Specialist",
+                                        fontSize: 14.sp,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
+                                Text(
+                                  "pet type",
                                   style: GoogleFonts.inter(
-                                      fontSize: 14.sp, color: Colors.black,fontWeight: FontWeight.w600),),
-                                Text("Contact number",
+                                      fontSize: 14.sp,
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                                Text("Gender",
                                     style: GoogleFonts.inter(
-                                        fontSize: 14.sp, color: Colors.black,fontWeight: FontWeight.w600)),
-                                 SizedBox(height: 4.h),
+                                        fontSize: 14.sp,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w600)),
+                                SizedBox(height: 4.h),
                               ],
                             ),
                           ),

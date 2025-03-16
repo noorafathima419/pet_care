@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AdminViewDocctor extends StatefulWidget {
@@ -16,18 +17,18 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
         appBar: AppBar(
           backgroundColor: Color(0xff5CB15A),
           title: Padding(
-            padding: const EdgeInsets.only(left: 150),
+            padding: EdgeInsets.only(left: 150.w),
             child: Text(
               "Doctors",
               style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500, fontSize: 20),
+                  fontWeight: FontWeight.w500, fontSize: 20.sp),
             ),
           ),
         ),
         body: Column(children: [
           Row(children: [
             Padding(
-                padding: const EdgeInsets.only(left: 30, top: 30),
+                padding: EdgeInsets.only(left: 30.w, top: 30.h),
                 child: Card(
                   child: Container(
                       child: ListView(children: [
@@ -40,9 +41,9 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                               children: [
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(top: 30, left: 130),
+                                      EdgeInsets.only(top: 30.h, left: 130.w),
                                   child: CircleAvatar(
-                                    radius: 40,
+                                    radius: 40.r,
                                   ),
                                 )
                               ],
@@ -50,15 +51,20 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 140),
-                                  child: Text("User name"),
+                                  padding: EdgeInsets.only(left: 130.w),
+                                  child: Text(
+                                    "User name",
+                                    style: GoogleFonts.poppins(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 15.sp),
+                                  ),
                                 )
                               ],
                             ),
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 150),
+                                  padding:  EdgeInsets.only(left: 140.w),
                                   child: Text("Location"),
                                 )
                               ],
@@ -67,13 +73,14 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                               children: [
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 30, top: 50),
+                                       EdgeInsets.only(left: 30.w
+                                           , top: 50.h),
                                   child: Text("User name"),
                                 )
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 30, right: 40),
+                              padding: EdgeInsets.only(left: 30.w, right: 40.r),
                               child: Container(
                                 // width: 300.w,
                                 child: TextFormField(
@@ -82,7 +89,7 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                                         borderSide:
                                             BorderSide(color: Colors.white),
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                            BorderRadius.circular(10.r)),
                                     prefixIconColor: Colors.white,
                                     suffixIconColor: Colors.pink,
                                     hintText: "name",
@@ -95,18 +102,18 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 30),
+                                  padding:  EdgeInsets.only(left: 30.w),
                                   child: Text(
                                     "Phone number",
                                     style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 15),
+                                        fontSize: 15.sp),
                                   ),
                                 )
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 30, right: 40),
+                              padding: EdgeInsets.only(left: 30.w, right: 40.w),
                               child: Container(
                                 // width: 300.w,
                                 child: TextFormField(
@@ -115,7 +122,7 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                                         borderSide:
                                             BorderSide(color: Colors.white),
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                            BorderRadius.circular(10.r)),
                                     prefixIconColor: Colors.white,
                                     suffixIconColor: Colors.pink,
                                     hintText: "0000000000",
@@ -128,18 +135,18 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 30),
+                                  padding:  EdgeInsets.only(left: 30.w),
                                   child: Text(
                                     "Eamil",
                                     style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 15),
+                                        fontSize: 15.sp),
                                   ),
                                 )
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 30, right: 40),
+                              padding: EdgeInsets.only(left: 30.w, right: 40.w),
                               child: Container(
                                 // width: 300.w,
                                 child: TextFormField(
@@ -148,7 +155,7 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                                         borderSide:
                                             BorderSide(color: Colors.white),
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                            BorderRadius.circular(10.r)),
                                     prefixIconColor: Colors.white,
                                     suffixIconColor: Colors.pink,
                                     hintText: "mail",
@@ -161,18 +168,18 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 30),
+                                  padding:  EdgeInsets.only(left: 30.w),
                                   child: Text(
                                     "Place",
                                     style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 15),
+                                        fontSize: 15.sp),
                                   ),
                                 )
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 30, right: 40),
+                              padding: EdgeInsets.only(left: 30.w, right: 40.w),
                               child: Container(
                                 // width: 300.w,
                                 child: TextFormField(
@@ -181,7 +188,7 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                                         borderSide:
                                             BorderSide(color: Colors.white),
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                            BorderRadius.circular(10.r)),
                                     prefixIconColor: Colors.white,
                                     suffixIconColor: Colors.pink,
                                     hintText: "place",
@@ -194,18 +201,18 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                             Row(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 30),
+                                  padding:  EdgeInsets.only(left: 30.w),
                                   child: Text(
                                     "password",
                                     style: GoogleFonts.poppins(
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 15),
+                                        fontSize: 15.sp),
                                   ),
                                 )
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: 30, right: 40),
+                              padding: EdgeInsets.only(left: 30.w, right: 40.w),
                               child: Container(
                                 // width: 300.w,
                                 child: TextFormField(
@@ -214,7 +221,7 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                                         borderSide:
                                             BorderSide(color: Colors.white),
                                         borderRadius:
-                                            BorderRadius.circular(10)),
+                                            BorderRadius.circular(10.r)),
                                     prefixIconColor: Colors.white,
                                     suffixIconColor: Colors.pink,
                                     hintText: "password",
@@ -228,45 +235,45 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                               children: [
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 30, top: 30),
+                                       EdgeInsets.only(left: 30.w, top: 30.h),
                                   child: Container(
                                     child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 5, left: 20),
+                                      padding:  EdgeInsets.only(
+                                          top: 5.h, left: 20.w),
                                       child: Text(
                                         "Accept",
                                         style: GoogleFonts.poppins(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w500,
-                                            fontSize: 20),
+                                            fontSize: 20.sp),
                                       ),
                                     ),
-                                    height: 40,
-                                    width: 130,
+                                    height: 40.h,
+                                    width: 130.w,
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(15),
+                                        borderRadius: BorderRadius.circular(15.r),
                                         color: Colors.lightGreen),
                                   ),
                                 ),
                                 Padding(
                                   padding:
-                                      const EdgeInsets.only(left: 10, top: 30),
+                                       EdgeInsets.only(left: 10.w, top: 30.h),
                                   child: Container(
                                     child: Padding(
-                                      padding: const EdgeInsets.only(
-                                          top: 5, left: 20),
+                                      padding:  EdgeInsets.only(
+                                          top: 5.h, left: 20.w),
                                       child: Text(
                                         "Reject",
                                         style: GoogleFonts.poppins(
                                             color: Colors.white,
                                             fontWeight: FontWeight.w500,
-                                            fontSize: 20),
+                                            fontSize: 20.sp),
                                       ),
                                     ),
-                                    height: 40,
-                                    width: 130,
+                                    height: 40.h,
+                                    width: 130.w,
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(15),
+                                        borderRadius: BorderRadius.circular(15.r),
                                         color: Colors.red),
                                   ),
                                 )
@@ -275,10 +282,10 @@ class _AdminViewDocctorState extends State<AdminViewDocctor> {
                           ],
                         ),
                       ]),
-                      height: 700,
-                      width: 325,
+                      height: 700.h,
+                      width: 325.w,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(10.r),
                         color: Color(0xffF0E4E4),
                         boxShadow: [
                           BoxShadow(
